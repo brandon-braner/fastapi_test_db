@@ -12,6 +12,6 @@ COPY ./pyproject.toml /opt/service/pyproject.toml
 #RUN poetry install
 RUN poetry install
 
-COPY ./app /opt/service/app
+COPY ./ /opt/service
 
 CMD ["poetry", "run", "uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8081"]

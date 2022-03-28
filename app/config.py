@@ -1,4 +1,3 @@
-import enum
 import os
 import pathlib
 from functools import lru_cache
@@ -12,6 +11,7 @@ base_path = pathlib.Path(__file__).parent.parent.resolve()
 
 
 class Settings(BaseSettings):
+
     # postgres
     postgres_user: str = os.environ.get("POSTGRES_USER")
     postgres_password: str = os.environ.get("POSTGRES_PASSWORD")

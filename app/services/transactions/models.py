@@ -11,4 +11,3 @@ class Transactions(Base):
     tax = Column(Integer)
     total = Column(Integer)
     status = Column(String)
-    
