@@ -18,7 +18,6 @@ sys.path.append(os.path.join(current_path, '../app'))
 
 
 from app.services.db import get_db
-from app.main import app
 
 
 session = get_db()
@@ -28,10 +27,10 @@ session = get_db()
 
 # Transactions.insert().values({"amount":10.00, "tax":0.07, "total": 0.07, "status":"pending"})
 session.query(Transactions).delete()
-transaction = Transactions(amount=10.00, tax=0.17, total= 0.09, status="pending")
-session.add(transaction)
-session.commit()
+# transaction = Transactions(amount=10.00, tax=0.17, total= 0.09, status="pending")
+# session.add(transaction)
+# session.commit()
 #
-# path = "/opt/service/app/tests/database_fixtures/"
-# fixtures = load_fixture_files(path, ['transactions.yaml'])
-# load_fixtures(session, fixtures)
+path = f"{current_path}/database_fixtures/"
+fixtures = load_fixture_files(path, ['transactions.yaml'])
+load_fixtures(session, fixtures)

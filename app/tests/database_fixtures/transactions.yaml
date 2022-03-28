@@ -1,7 +1,7 @@
 - model: app.services.transactions.models.Transactions
   id: 1
   fields:
-    amount: 10.00
-    tax: 0.70
-    total: 10.70
+    amount: 10.70
+    tax: 1.00
+    total: 11.70
     status: "paid"
