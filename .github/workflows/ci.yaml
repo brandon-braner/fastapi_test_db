@@ -54,7 +54,7 @@ jobs:
           POSTGRES_DB: test_db
         run: |
           echo "Running tests..."
-          cd /opt/service/app
+          cd /opt/service
           poetry install
           poetry run alembic upgrade head
           poetry run pytest
