@@ -44,4 +44,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Test with Pytest
-        run: poetry run pytest
+        run: |
+          echo "Running tests..."
+          cd /opt/service/app
+          poetry install
+          poetry run pytest
