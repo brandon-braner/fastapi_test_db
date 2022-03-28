@@ -24,4 +24,4 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/fastapi_test_db:latest
+          tags:  blbraner/fastapi_test_db:latest
