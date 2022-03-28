@@ -19,7 +19,4 @@ Base = declarative_base()
 def get_db():
     """Get sqlalchemy session."""
     db = SessionLocal()
-    try:
-        yield db
-    finally:
-        db.close()
+    return db
