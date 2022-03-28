@@ -9,4 +9,4 @@ def test_this():
 
 def test_get_transactions():
     resp = client.get('/transactions')
-    print(resp.json()[0]['total'])
+    assert resp.json()[0]['total'] == 0.09
