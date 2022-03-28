@@ -28,6 +28,7 @@ jobs:
           tags:  blbraner/fastapi_test_db:latest
 
   test:
+    needs: build
     runs-on: ubuntu-latest
     services:
       postgres:
