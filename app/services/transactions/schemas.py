@@ -1,7 +1,7 @@
 from pydantic import BaseModel
 
 
-class Transactions(BaseModel):
+class TransactionsSchema(BaseModel):
     amount: float
     tax: float
     total: float
